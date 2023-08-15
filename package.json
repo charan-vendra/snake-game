@@ -1,0 +1,22 @@
+{
+    "name": "src",
+    "version": "1.0.0",
+    "description": "Server for Xenzia web app",
+    "main": "eth.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "vite --host"
+    },
+    "keywords": [],
+    "author": "charan vendra",
+    "license": "ISC",
+    "dependencies": {
+        "@wagmi/core": "^1.3.8",
+        "@web3modal/ethereum": "^2.7.1",
+        "@web3modal/html": "^2.7.1",
+        "viem": "^1.5.0"
+    },
+    "devDependencies": {
+        "vite": "^4.4.8"
+    }
+}

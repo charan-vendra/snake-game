@@ -1,0 +1,1 @@
+{"version":"1.0.0","name":"src","dependencies":{"@wagmi/core":{"version":"1.3.9"},"@web3modal/ethereum":{"version":"2.7.1"},"@web3modal/html":{"version":"2.7.1"},"viem":{"version":"1.6.0"}}}
