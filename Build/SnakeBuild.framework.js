@@ -1155,26 +1155,26 @@ var tempDouble;
 var tempI64;
 
 var ASM_CONSTS = {
- 2955780: function() {
+ 2954388: function() {
   Module["emscripten_get_now_backup"] = performance.now;
  },
- 2955835: function($0) {
+ 2954443: function($0) {
   performance.now = function() {
    return $0;
   };
  },
- 2955883: function($0) {
+ 2954491: function($0) {
   performance.now = function() {
    return $0;
   };
  },
- 2955931: function() {
+ 2954539: function() {
   performance.now = Module["emscripten_get_now_backup"];
  },
- 2955986: function() {
+ 2954594: function() {
   return Module.webglContextAttributes.premultipliedAlpha;
  },
- 2956047: function() {
+ 2954655: function() {
   return Module.webglContextAttributes.preserveDrawingBuffer;
  }
 };
@@ -1276,18 +1276,6 @@ function stackTrace() {
  var js = jsStackTrace();
  if (Module["extraStackTrace"]) js += "\n" + Module["extraStackTrace"]();
  return demangleAll(js);
-}
-
-function _CloseInputKeyboard() {
- document.getElementById("fixInput").blur();
-}
-
-function _FixInputOnBlur() {
- SendMessage("_WebGLKeyboard", "LoseFocus");
-}
-
-function _FixInputUpdate() {
- SendMessage("_WebGLKeyboard", "ReceiveInputChange", document.getElementById("fixInput").value);
 }
 
 var JS_Accelerometer = null;
@@ -2847,11 +2835,6 @@ function _JS_WebRequest_SetTimeout(requestId, timeout) {
   return;
  }
  requestOptions.timeout = timeout;
-}
-
-function _OpenInputKeyboard(currentValue) {
- document.getElementById("fixInput").value = Pointer_stringify(currentValue);
- document.getElementById("fixInput").focus();
 }
 
 var webSocketInstances = [];
@@ -13699,9 +13682,6 @@ function intArrayFromString(stringy, dontAddNull, length) {
 }
 
 var asmLibraryArg = {
- "CloseInputKeyboard": _CloseInputKeyboard,
- "FixInputOnBlur": _FixInputOnBlur,
- "FixInputUpdate": _FixInputUpdate,
  "JS_Accelerometer_IsRunning": _JS_Accelerometer_IsRunning,
  "JS_Accelerometer_Start": _JS_Accelerometer_Start,
  "JS_Accelerometer_Stop": _JS_Accelerometer_Stop,
@@ -13773,7 +13753,6 @@ var asmLibraryArg = {
  "JS_WebRequest_SetRedirectLimit": _JS_WebRequest_SetRedirectLimit,
  "JS_WebRequest_SetRequestHeader": _JS_WebRequest_SetRequestHeader,
  "JS_WebRequest_SetTimeout": _JS_WebRequest_SetTimeout,
- "OpenInputKeyboard": _OpenInputKeyboard,
  "SocketClose": _SocketClose,
  "SocketCreate": _SocketCreate,
  "SocketError": _SocketError,
